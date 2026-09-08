@@ -33,12 +33,18 @@ else:
     print("Percentage:", percentage, "%")
     print("Grade:", grade)
 
-    if percentage >= 40:
-        print("Result: PASS")
-    else:
-        print("Result: FAIL")
+    print("\n----- SUBJECT RESULTS -----")
 
-if percentage >= 40:
-    print("Result: PASS 🎉")
-else:
-    print("Result: FAIL")
+subjects = {
+    "Maths": maths,
+    "Physics": physics,
+    "Python": python,
+    "English": english,
+    "Electronics": electronics
+}
+
+for subject, mark in subjects.items():
+    if mark >= 40:
+        print(subject + ":", mark, "- PASS")
+    else:
+        print(subject + ":", mark, "- FAIL")
